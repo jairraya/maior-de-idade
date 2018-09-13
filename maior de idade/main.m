@@ -1,21 +1,27 @@
 #include <stdio.h>
-//#include <stdlib.h>
+#include <stdlib.h>
 
 int main(void)
 {
-    int i, num = 0, idade;
+    int quantidade, idade, count;
     
-    //printf("Digite a idade de 10 pessoas: ");
-    //scanf("%d", &idade);
+    quantidade = 0;
+    idade = 0;
+    count = 0;
     
-    for(i = 0; i < 10; i++){
-        printf("Informe a idade de %d pessoa: ", i + 1);
+    while (quantidade < 10)
+    {
+        //comandos a serem repetidos
+        printf("Informe a idade da %d pessoa: ", quantidade + 1);
         scanf("%d", &idade);
+        quantidade++;
+    
+        //faz o calculo para saber quantos sao maiores de idade
         if(idade >= 18)
-            num++;
+            count++;
     }
     
-    printf("%d pessoas sao maiores de idade", num);
+    printf("%d sao maiores de idade.", count);
     
     puts("\n");
     
